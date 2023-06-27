@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 public class BrandBusinessRules {
 	private BrandRepository brandRepository;
 	
-	
+	//create: throw exceptions
 	public void checkIfBrandNameExists(String name) {
 		if(this.brandRepository.existsByName(name));
 			throw new BusinessException("Brand name already exists");
